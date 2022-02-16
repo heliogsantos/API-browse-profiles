@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('./src/database/connection');
+
 const Profiles = require('./src/routers/profiles');
 const Skills = require('./src/routers/skills');
 
