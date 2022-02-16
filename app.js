@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
-const process = require('process');
+const Profiles = require('./src/routers/profiles');
+const Skills = require('./src/routers/skills');
 
 const app = express();
 
 app.use(express.json());
 
-app.port = process.env.PORT || 3000
+app.use('/profiles', Profiles)
+app.use('/skills', Skills)
 
 module.exports = { app };
